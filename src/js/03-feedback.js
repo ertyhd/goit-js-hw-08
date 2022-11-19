@@ -1,4 +1,3 @@
-// localStorage.setItem('feedback-form-state');
 const throttle = require('lodash.throttle');
 const refs = {
   onInputData: document.querySelector('.feedback-form'),
