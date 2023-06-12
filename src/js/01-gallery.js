@@ -4,8 +4,6 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
 // Change code below this line
 
-console.log(galleryItems);
-
 const refs = {
   galereyList: document.querySelector('.gallery'),
   body: document.querySelector('body'),
@@ -32,10 +30,10 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
   scrollZoom: false,
 });
+
 function onGaleryListClick(event) {
   event.preventDefault();
   if (!event.target.classList.contains('gallery__image')) {
     return;
   }
 }
-console.dir(refs.body);

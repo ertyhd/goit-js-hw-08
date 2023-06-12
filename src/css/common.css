@@ -10,9 +10,137 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  background-image: url('/assets/pexels-johannes.jpg');
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+.bodyUl {
+  /* background-image: url('/assets/pexels-johannes.jpg'); */
+  background-color: #2c918f;
+  object-fit: contain;
+  position: relative;
+  /* border: 1px solid #2c918f; */
+  border-radius: 40px;
+  width: 600px;
+  height: 400px;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  list-style: none;
+  gap: 20px;
+
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+}
+.bodyUl::after {
+  position: absolute;
+  z-index: -1;
+  background-color: #fff;
+  top: 5px;
+  left: 3px;
+  content: '';
+  border-radius: 40px;
+  /* border: 1px solid tomato; */
+  width: 600px;
+  height: 400px;
+  box-shadow: 1px -1px 8px 3px rgba(0, 0, 0, 0.65) inset;
+}
+
+.bodyLi {
+  margin-left: 40px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background-color: #2c918f;
+}
+.bodyLink {
+  display: flex;
+  width: 140px;
+  height: 54px;
+  /* border: 1px solid #38b8b8; */
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.bodyLink span {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  background-color: #2ca3a3;
+  width: 90%;
+  height: 84%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: linear-gradient(to right, #2ca3a3, #1d6b6b);
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease;
+}
+
+.bodyLink span:hover {
+  background-color: #47ecec;
+  transition: background-color 0.3s ease;
+}
+
+.bodyLink::before {
+  position: absolute;
+  content: '';
+  width: 156px;
+  height: 40px;
+  background: linear-gradient(0deg, transparent 50%, white 50%);
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  background-position: top left, top right;
+  transform: rotate(0deg);
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+}
+
+.bodyLink:hover::before {
+  animation-name: spin;
+  animation-duration: 600ms;
+  animation-timing-function: linear;
+  animation-iteration-count: inherit;
+}
+
+.bodyLink:not(:hover)::before {
+  animation-name: spin-rev;
+  animation-duration: 600ms;
+  animation-timing-function: linear;
+  animation-iteration-count: inherit;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes spin-rev {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
